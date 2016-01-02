@@ -1,2 +1,6 @@
 # Time before a player is kicked, in minutes.
 afk-timeout: 5
+
+# How long before a player is warned that he or she is about to be kicked (seconds)
+# Ex. with afk-timeout at 5, a player will be warned at 4:45 if the time is set to 15
+afk-warning: 15

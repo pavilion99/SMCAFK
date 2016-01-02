@@ -2,7 +2,8 @@ package tech.spencercolton.smcafk;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import tech.spencercolton.smcafk.Listeners.PlayerMoveListener;
-import tech.spencercolton.smcafk.Scheduler.AFKTimer;
+import tech.spencercolton.smcafk.Scheduler.AFKWarn;
+import tech.spencercolton.smcafk.Util.AFKManager;
 import tech.spencercolton.smcafk.Util.Config;
 
 /**
@@ -29,7 +30,7 @@ public class SMCAFK extends JavaPlugin {
     }
 
     public void onDisable() {
-        AFKTimer.clear();
+        AFKManager.clear();
     }
 
     public static SMCAFK getInstance() {
@@ -37,7 +38,7 @@ public class SMCAFK extends JavaPlugin {
     }
 
     public void initAFKTimers() {
-        getServer().getOnlinePlayers().stream().forEach(AFKTimer::new);
+        getServer().getOnlinePlayers().stream().forEach(AFKWarn::new);
     }
 
 }
