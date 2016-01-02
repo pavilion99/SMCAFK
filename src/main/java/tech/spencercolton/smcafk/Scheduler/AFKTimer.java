@@ -26,7 +26,7 @@ public class AFKTimer extends BukkitRunnable {
     public AFKTimer(Player p, int time) {
         this.p = p;
         if(time != 1)
-            this.add = ".";
+            this.add = "s";
         this.time = time;
 
         timers.put(p, this.runTaskLater(SMCAFK.getInstance(), time * TICKS_IN_MINUTE));
