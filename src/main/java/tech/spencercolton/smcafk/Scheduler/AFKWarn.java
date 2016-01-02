@@ -26,7 +26,7 @@ public class AFKWarn extends BukkitRunnable {
         if(latentTime != 1)
             this.add = "s";
 
-        AFKManager.addPlayer(p, this.runTaskLater(SMCAFK.getInstance(), time * TICKS_IN_MINUTE));
+        AFKManager.addPlayer(p, this.runTaskLater(SMCAFK.getInstance(), time));
     }
 
     public AFKWarn(Player p) {
