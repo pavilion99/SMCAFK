@@ -1,0 +1,2 @@
+# Time before a player is kicked, in minutes.
+afk-timeout: 5
