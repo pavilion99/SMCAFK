@@ -1,6 +1,7 @@
 package tech.spencercolton.smcafk;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import tech.spencercolton.smcafk.Listeners.PlayerFishListener;
 import tech.spencercolton.smcafk.Listeners.PlayerJoinListener;
 import tech.spencercolton.smcafk.Listeners.PlayerMoveListener;
 import tech.spencercolton.smcafk.Listeners.PlayerQuitListener;
@@ -31,6 +32,7 @@ public class SMCAFK extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerQuitListener(), this);
         this.getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        this.getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
     }
 
     public void onDisable() {

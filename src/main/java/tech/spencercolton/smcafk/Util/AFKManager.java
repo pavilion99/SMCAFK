@@ -4,13 +4,17 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 import tech.spencercolton.smcafk.Scheduler.AFKWarn;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author Spencer Colton
  */
 public class AFKManager {
+
+    public static List<Player> exempt = new ArrayList<>();
 
     private static Map<Player, BukkitTask> warns = new HashMap<>();
     private static Map<Player, BukkitTask> kicks = new HashMap<>();

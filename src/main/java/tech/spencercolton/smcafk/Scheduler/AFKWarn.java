@@ -35,6 +35,9 @@ public class AFKWarn extends BukkitRunnable {
 
     @Override
     public void run() {
+        if(AFKManager.exempt.contains(p))
+            return;
+
         this.p.sendMessage(ChatColor.DARK_PURPLE + "[SMCAFK] You will be kicked for inactivity in " + latentTime + " second" + add + ".  Move to cancel.");
         int del = Config.getInt("afk-warning") * TICKS_IN_SECOND;
         new AFKKick(p, del);
